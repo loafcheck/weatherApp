@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange}/>
+      <p>hello</p>
     </div>
   );
 }
