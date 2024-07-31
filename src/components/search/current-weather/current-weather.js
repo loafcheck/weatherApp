@@ -8,7 +8,6 @@ const CurrrentWeather = () => {
                     <p className="city">Seoul</p>
                     <p className="weather-description">Sunny</p>
                 </div>
-            
                 <img alt="weather" className="weather-icon" src="icons/01d.png"/>
             </div>
             <div className="bottom">
@@ -19,15 +18,15 @@ const CurrrentWeather = () => {
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Wind</span>
-                        <span className="parameter-label">2m/s</span>
+                        <span className="parameter-value">2m/s</span>
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Humidity</span>
-                        <span className="parameter-label">45%</span>
+                        <span className="parameter-value">45%</span>
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Pressure</span>
-                        <span className="parameter-label">25hPa</span>
+                        <span className="parameter-value">25hPa</span>
                     </div>
                 </div>
             </div>
