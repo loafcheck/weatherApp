@@ -38,9 +38,9 @@ const Search = ({onSearchChange}) => {
         });
     };
 
-    const handleOnChange = (searchData) => {
-        setsearch(searchData);
-        onSearchChange(searchData); //Notify parent component
+    const handleOnChange = (passingSelectedOptionFromTheInput) => {
+        setsearch(passingSelectedOptionFromTheInput);
+        onSearchChange(passingSelectedOptionFromTheInput); //Notify parent component
     }
 
     return (

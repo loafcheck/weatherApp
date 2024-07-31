@@ -22,13 +22,14 @@ function App() {
         const forecastResponse = await response[1].json();
 
         setCurrentWeather({city: searchData.label, ...weatherResponse});
+        console.log(`city: searchData.label ->`, {city: searchData.label} , {...weatherResponse})
         setForecast({city: searchData.label, ...forecastResponse});
       })
       .catch ((err)=> console.log(err));
   }
 
-  console.log(`currentWeather: ${currentWeather.city} & ${currentWeather.wind.deg}`,currentWeather );
-  console.log(`forecast: ${forecast}`);
+  console.log(`currentWeather: `, currentWeather );
+  console.log(`forecast:`, forecast);
 
   return (
     <div className="container">
