@@ -4,9 +4,14 @@ import { geoApiOptions, GEO_API_URL } from "../../api";
 
 const Search = ({onSearchChange}) => {
 
+    console.log('hello 1');
+
     const [search, setsearch] = useState(null);
 
+    console.log('hello 2');
+
     const loadOptions = (inputValue) => {
+        console.log('hello2-2');
         return fetch (
             `${GEO_API_URL}/?namePrefix=${inputValue}`,
         geoApiOptions
@@ -25,6 +30,7 @@ const Search = ({onSearchChange}) => {
                 label: `${city.name}, ${city.countryCode}` 
             }));
 
+            console.log('hello 3');
             console.log('Mapped Options: ', options);
 
             return {options};
@@ -38,9 +44,13 @@ const Search = ({onSearchChange}) => {
         });
     };
 
-    const handleOnChange = (searchData) => {
-        setsearch(searchData);
-        onSearchChange(searchData); //Notify parent component
+    console.log('hello 4');
+
+    const handleOnChange = (passingSelectedOptionFromTheInput) => {
+        console.log('hello 5');
+        console.log(`passingSelectedOptionFromTheInput ${JSON.stringify(passingSelectedOptionFromTheInput, null, 2)}`)
+        setsearch(passingSelectedOptionFromTheInput);
+        onSearchChange(passingSelectedOptionFromTheInput); //Notify parent component
     }
 
     return (
